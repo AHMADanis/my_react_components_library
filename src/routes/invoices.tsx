@@ -12,7 +12,7 @@ export default function Invoices() {
 					borderRight: 'solid 1px',
 					padding: '1rem',
 				}}>
-				<input
+				<input // search input
 					value={searchParams.get('filter') || ''}
 					onChange={(event) => {
 						let filter = event.target.value;
@@ -24,14 +24,16 @@ export default function Invoices() {
 					}}
 				/>
 
-				{invoices
+				{invoices // set search params
 					.filter((invoice) => {
 						let filter = searchParams.get('filter');
 						if (!filter) return true;
 						let name = invoice.name.toLowerCase();
 						return name.startsWith(filter.toLowerCase());
 					})
-					.map((invoice) => (
+					.map((
+						invoice // active list color
+					) => (
 						<NavLink
 							style={({ isActive }) => {
 								return {

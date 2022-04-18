@@ -6,11 +6,11 @@ export default function App() {
 			<h1>Bookkeeper</h1>
 			<nav
 				style={{
-					borderBottom: 'solid 1px',
+					borderBottom: 'solid 2px blue',
 					paddingBottom: '1rem',
 				}}>
 				<Link to="/invoices">Invoices</Link> |{' '}
-				<Link to="/expenses">Expenses</Link>
+				<Link to="/expenses">Expenses</Link> | <Link to="/about">About</Link>
 			</nav>
 			<Outlet />
 		</div>
